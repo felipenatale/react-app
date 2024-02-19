@@ -2,10 +2,18 @@ import { useEffect, useState } from "react";
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { Layout } from "../components/Layout";
 import { client } from "../lib/createClient";
+import {
+    useParams,
+    Link
+  } from "react-router-dom";
+
 
 const POST_SLUG = "nosso-segundo-post";
 
 export const Post = () => {
+
+    const { slug } = useParams();
+
     const [post, setPost] = useState(null);
 
     useEffect(() => {
@@ -32,9 +40,9 @@ export const Post = () => {
                             <div dangerouslySetInnerHTML={{__html: documentToHtmlString(post.fields.postBody)}}></div>
 
                             <div className="mt-1">
-                                <a href="#" className="btn btn-primary">
+                                <Link to="/" className="btn btn-primary">
                                     Voltar para Home
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
