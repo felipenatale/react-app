@@ -8,8 +8,6 @@ import {
   } from "react-router-dom";
 
 
-const POST_SLUG = "nosso-segundo-post";
-
 export const Post = () => {
 
     const { slug } = useParams();
@@ -19,11 +17,10 @@ export const Post = () => {
     useEffect(() => {
         client
             .getEntries({
-                "fields.slug": POST_SLUG,
+                "fields.slug": slug,
                 content_type: 'blogPage',
             })
             .then(function (entries) {
-                console.log("post", entries);
                 setPost(entries.items[0] || null);
             });
     }, []);

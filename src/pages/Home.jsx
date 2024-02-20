@@ -18,7 +18,6 @@ export const Home = () => {
                 order: "-sys.createdAt"
             })
             .then(function (entries) {
-                console.log('posts', entries.items);
                 setPosts(entries.items);
             });
 
@@ -28,7 +27,6 @@ export const Home = () => {
                 content_type: 'blogCategory',
             })
             .then(function (entries) {
-                console.log('categorias', entries.items);
                 setCategories(entries.items);
             });
     }, []); // array vazio indica o onload do componente
@@ -38,21 +36,21 @@ export const Home = () => {
             <div className="container">
                 <div className="row">
                     <main className="col-md-8">
-                        <h1 className="my-3">Últimos posts</h1>
+                        <h1 className="my-3">Últimos posts - HOME</h1>
 
                         {posts.map(post => (
                             <div className="card mb-3" key={post.sys.id}>
                                 <div className="card-body">
                                     <h5 className="card-title">{post.fields.postTitle}</h5>
                                     <p className="card-text">{post.fields.postDescription}</p>
-                                    <Link to={`/post/${post.fields.postSlug}`} className="card-link">
+                                    <Link to={`/post/${post.fields.slug}`} className="card-link">
                                         Ver post
                                     </Link>
                                 </div>
                             </div>
                         ))}
                        
-                        <a href="#" className='btn btn-primary'>Ver todos os posts</a>
+                        <Link to={`/paginate`} className='btn btn-primary'>Ver todos os posts</Link>
                     </main>
                
                     <aside className="col-md-4">

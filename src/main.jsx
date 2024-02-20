@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Home } from './pages/Home';
 import { Post } from './pages/Post';
+import { Pagination } from './pages/Pagination';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
         <Route path="/post/:slug">
           <Post />
+        </Route>
+        <Route path="/paginate">
+          <Pagination />
         </Route>
         <Route path="*">
           <Home />
