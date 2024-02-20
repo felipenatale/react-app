@@ -1,8 +1,28 @@
-# React + Vite
+# React + Vite - FIAP Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Construção de Blog com CMS para gestão de conteúdo utilizando Contentful + React. 
 
-Currently, two official plugins are available:
+<b>Etapas</b>
+1. Construção da tela de exibição dos últimos posts - DONE
+2. Construção de tela de paginação dos posts - DONE
+3. Desenvolvimento do README - DONE
+4. Deploy no Vercel com hot deploy - DONE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<b>Bibliotecas e Dependencias</b>
+
+- "bootstrap": "^5.3.2"
+- "contentful": "^10.6.21"
+- "react": "^18.2.0"
+- "vite": "^5.0.8"
+
+<b>Features Disponíveis</b>
+- Integração com CMS - Contentful para gestão de conteúdo
+- Tela inicial com últimos posts
+- Tela de detalhe de cada post
+- Tela de paginação de todos os posts disponíveis
+- Principais categorias
+
+Executando projeto localmente
+1. Clonar o projeto localmente
+2. Configurar o arquivo "constant.js" com os tokens do contentful (spaceID e accessToken).
+   - Em carater de estudo, o arquivo foi commitado no projeto. NÃO REPETIR EM PRODUÇÃO.
