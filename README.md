@@ -28,3 +28,8 @@ Construção de Blog com CMS para gestão de conteúdo utilizando Contentful + R
    - Em carater de estudo, o arquivo foi commitado no projeto. NÃO REPETIR EM PRODUÇÃO.
 3. Executar o comando `npm install` para instalação de dependencias.
 4. Executar o comando `npm run dev` para subir a aplicação localmente.
+
+### Deploy em ambiente
+- A plataforma escolhida para deploy foi o [Vercel](https://vercel.com).
+- Blog disponível em: [LINK](https://react-app-natale.vercel.app/).
+- No vercel, foi criado um novo projeto e configurado a branch main do projeto no github. Dessa forma, a cada novo push de código na branch main, o novo código já é deployado no ambiente.
